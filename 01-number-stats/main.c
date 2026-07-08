@@ -35,7 +35,6 @@ int above_average(const int values[], int length){
     for (i=0;  i<length;i++){
         if(values[i]>avrg){
             number_of_above_average++;
-            printf("%f", avrg);
         } 
 
     }
