@@ -15,7 +15,7 @@ int find_max(const int values[], int length){
         if (max_value < values[i]){
             max_value=values[i];
         }
-    };
+    }
     return max_value;
 }
 
@@ -45,8 +45,13 @@ int above_average(const int values[], int length){
 int main(void)
 {
     int n = 0;
-    printf("how many numbers will you put in\n");
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1) {
+        return 1;
+    }
+    if (n <= 0 || n > 100) {
+        return 1;
+    }
+
     int values[n], i;
     if (n <= 100 && n > 0){
         for (i = 0; i <= n-1; i++) {
