@@ -16,6 +16,7 @@ int main(void){
         printf("Please enter a number between 1-5");
         return 1;
     }
+    printf("Program initializing")
    /*switch(choice){
         case 1:
         break;
