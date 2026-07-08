@@ -48,21 +48,21 @@ int main(void)
     printf("how many numbers will you put in\n");
     scanf("%d", &n);
     int values[n], i;
-    if (n <= 100 || n > 0){
+    if (n <= 100 && n > 0){
         for (i = 0; i <= n-1; i++) {
             scanf("%d", &values[i]);
         }
+        int write_min= find_min(values, n); 
+        int write_max= find_max(values, n);
+        int write_average= average(values,n); 
+        int write_numbers_above_average= above_average(values,n);             
+        printf("Min value of this numbers is: %d\n", write_min);
+        printf("Max value of this numbers is: %d\n", write_max);
+        printf("Average of this number is: %d\n",write_average);
+        printf("There are %d numbers above average.\n",write_numbers_above_average);
     }else{
-        printf("The maximum numbers of input can be 100");
+        printf("The range must be in between 0-100");
     }
-    int write_min= find_min(values, n); 
-    int write_max= find_max(values, n);
-    int write_average= average(values,n); 
-    int write_numbers_above_average= above_average(values,n);             
-    printf("Min value of this numbers is: %d\n", write_min);
-    printf("Max value of this numbers is: %d\n", write_max);
-    printf("Average of this number is: %d\n",write_average);
-    printf("There are %d numbers above average.\n",write_numbers_above_average);
     return 0;
 }
 
