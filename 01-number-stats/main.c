@@ -25,7 +25,7 @@ double average(const int values[], int length){
     for(i=0; i<length;i++){
         total_of_array+= values[i];
     } 
-    double average_of_array = total_of_array/length;
+    double average_of_array = (double) total_of_array / length;
     return average_of_array;
 }
 int above_average(const int values[], int length){
@@ -54,11 +54,11 @@ int main(void)
         }
         int write_min= find_min(values, n); 
         int write_max= find_max(values, n);
-        int write_average= average(values,n); 
+        double write_average = average(values, n);
         int write_numbers_above_average= above_average(values,n);             
         printf("Min value of this numbers is: %d\n", write_min);
         printf("Max value of this numbers is: %d\n", write_max);
-        printf("Average of this number is: %d\n",write_average);
+        printf("Average of these numbers is: %.2f\n", write_average);
         printf("There are %d numbers above average.\n",write_numbers_above_average);
     }else{
         printf("The range must be in between 0-100");
